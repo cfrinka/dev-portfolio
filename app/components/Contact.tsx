@@ -32,35 +32,27 @@ const Contact = () => {
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="glass p-8 rounded-2xl space-y-8 w-full"
+          className="glass p-8 rounded-2xl space-y-8 w-full min-h-[400px]"
           id="this-div"
         >
           <div className="space-y-2">
             <p className="text-lg text-purple-300">Phone</p>
-            <a
-              href="tel: +5516981541659"
-              className="text-2xl font-semibold hover:text-purple-400 transition duration-300 flex items-center gap-2"
-            >
+            <p className="text-2xl font-semibold hover:text-purple-400 transition duration-300 flex items-center gap-2">
               +55 (16) 98154-1659
-            </a>
+            </p>
           </div>
           <div className="space-y-2">
             <p className="text-lg text-purple-300">Email</p>
-            <a
-              href="mailto:c.frinkaneto@icloud.com"
-              className="text-2xl font-semibold hover:text-purple-400 transition duration-300 flex items-center gap-2"
-            >
+            <p className="text-2xl font-semibold hover:text-purple-400 transition duration-300 flex items-center gap-2">
               c.frinkaneto@icloud.com
-            </a>
+            </p>
           </div>
+
           <div className="space-y-2">
             <p className="text-lg text-purple-300">Localização</p>
-            <a
-              href="#"
-              className="text-2xl font-semibold hover:text-purple-400 transition duration-300 flex items-center gap-2"
-            >
+            <p className="text-2xl font-semibold hover:text-purple-400 transition duration-300 flex items-center gap-2">
               Jardinópolis - SP - Brazil
-            </a>
+            </p>
           </div>
         </motion.div>
 
