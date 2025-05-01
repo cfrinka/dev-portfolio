@@ -87,13 +87,15 @@ const Portfolio = () => {
             </div>
           ))}
         </div>
-        <Image
-          src={selectedProject.image}
-          alt={selectedProject.title}
-          className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
-          width={800}
-          height={450}
-        />
+        <div className="w-full flex items-center justify-center">
+          <Image
+            src={selectedProject.image}
+            alt={selectedProject.title}
+            className="rounded-xl shadow-lg transition-opacity duration-500 ease-in-out"
+            width={800}
+            height={450}
+          />
+        </div>
       </div>
     </motion.section>
   );
