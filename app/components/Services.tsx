@@ -1,31 +1,44 @@
 import React from "react";
+
 const services = [
   {
     id: 1,
-    title: "Web Development",
-    description: "Building responsive and user-friendly websites.",
+    title: "Fullstack Web Development",
+    description:
+      "Building responsive, performant web applications with React, Next.js, Vue.js, and Node.js.",
   },
   {
     id: 2,
-    title: "Mobile Development",
-    description: "Creating mobile applications for iOS and Android.",
+    title: "Legacy System Modernization",
+    description:
+      "Refactoring outdated systems into scalable, maintainable architectures with modern tech stacks.",
   },
   {
     id: 3,
-    title: "UI/UX Design",
-    description: "Designing intuitive and engaging user interfaces.",
+    title: "API & System Integration",
+    description:
+      "Seamlessly connecting third-party APIs, authentication systems, and real-time data services.",
   },
   {
     id: 4,
-    title: "SEO Optimization",
-    description: "Improving website visibility on search engines.",
+    title: "UI/UX Implementation",
+    description:
+      "Collaborating with designers to create accessible, user-friendly interfaces with Styled Components and Material UI.",
   },
   {
     id: 5,
-    title: "Cloud Services",
-    description: "Providing cloud solutions for scalability and reliability.",
+    title: "Performance Optimization",
+    description:
+      "Optimizing database queries, backend services, and frontend performance for faster user experiences.",
+  },
+  {
+    id: 6,
+    title: "Automated Testing",
+    description:
+      "Ensuring robust applications with React Testing Library and 95%+ code coverage.",
   },
 ];
+
 const Services = () => {
   return (
     <section className="text-white py-20 min-h-screen">

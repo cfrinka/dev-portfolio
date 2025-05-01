@@ -1,7 +1,6 @@
 import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import KeyMetrics from "./components/KeyMetrics";
-import LogoAnimation from "./components/LogoAnimation";
 import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
 import Services from "./components/Services";
@@ -12,10 +11,7 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-      <div className="min-h-screen">
-        <Stack />
-        <LogoAnimation />
-      </div>
+      <Stack />
       <Portfolio />
       <KeyMetrics />
       <Services />

@@ -1,5 +1,4 @@
 "use client";
-import obj from "@/assets/obj1.png";
 import profilePicture from "@/assets/profilepic.png";
 import {
   useMotionValue,
@@ -29,6 +28,23 @@ const Hero = () => {
   const border = useMotionTemplate`1px solid ${color}`;
   const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
 
+  const handleDownload = () => {
+    const language = navigator.language;
+    if (language === "pt-BR") {
+      window.open(
+        process.env.NEXT_PUBLIC_CVPTBR,
+        "_blank",
+        "noopener noreferrer"
+      );
+    } else {
+      window.open(
+        process.env.NEXT_PUBLIC_CVENG,
+        "_blank",
+        "noopener noreferrer"
+      );
+    }
+  };
+
   return (
     <motion.section
       style={{ backgroundImage }}
@@ -38,47 +54,28 @@ const Hero = () => {
         <span className="mb-1.5 inline-block rounded-full bg-gray-600/50 px-3 py-1.5 text-sm">
           Open for work
         </span>
-        <h1 className="text-white/40 text-5xl md:text-7xl font-black">
-          Hi there, I am
+        <h1 className="text-5xl md:text-7xl font-black leading-tight text-white/40">
+          Hi there, I am{" "}
+          <span className="bg-gradient-to-br from-white to-gray-400 bg-clip-text text-transparent">
+            Neto
+          </span>
         </h1>
-        <h1 className="max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text font-black leading-tight text-5xl md:text-7xl text-transparent">
-          Neto
-        </h1>
+
         <div>
           <Image src={profilePicture} alt="profile picture" width={250} />
         </div>
-        <div className="flex bg-white/10 shadow-xl p-3 rounded-3xl justify-center items-center space-x-2 mb-4">
-          <Image
-            src={obj}
-            alt="object"
-            width={30}
-            className="rounded-2xl mx-auto"
-          />
-          <Image
-            src={obj}
-            alt="object"
-            width={30}
-            className="rounded-2xl mx-auto"
-          />
-          <Image
-            src={obj}
-            alt="object"
-            width={30}
-            className="rounded-2xl mx-auto"
-          />
-          <p className="font-medium"> 80 + Happy Clients</p>
-        </div>
-        <p className="my-6 max-w-xl text-center">
+        <p className="my-6 max-w-3xl text-center text-2xl">
           Fullstack Developer based in Brazil, with over 5 years experience
         </p>
         <motion.button
           style={{ border, boxShadow }}
           whileHover={{ scale: 1.015 }}
           whileTap={{ scale: 0.985 }}
-          className="flex w-fit items-center gap-2 rounded-full px-4 py-2 "
+          className="flex w-fit items-center gap-2 rounded-full px-4 py-2"
+          onClick={() => handleDownload()}
         >
           Download CV
-          <FiArrowRight className="" />
+          <FiArrowRight />
         </motion.button>
       </div>
       <div className="bg-circle-container">

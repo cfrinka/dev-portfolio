@@ -7,41 +7,41 @@ const metrics = [
     id: 1,
     value: "5+",
     label: "Years of Experience",
-    description: "Dedicated to delivering high-quality software solutions.",
+    description:
+      "Fullstack developer with expertise in modern web technologies and scalable systems.",
   },
   {
     id: 2,
-    value: "20+",
+    value: "10+",
     label: "Projects Delivered",
     description:
-      "Successfully deployed full-stack applications across various domains.",
+      "Built applications for international clients, including high-profile events like Superbowl 2021.",
   },
   {
     id: 3,
-    value: "98%",
-    label: "Client Satisfaction",
+    value: "95%",
+    label: "Code Coverage",
     description:
-      "Consistently exceeds expectations through clear communication and results.",
+      "Achieved high test coverage with React Testing Library for robust applications.",
   },
   {
     id: 4,
-    value: "10K+",
-    label: "Lines of Code",
+    value: "3x",
+    label: "Legacy Systems Modernized",
     description:
-      "Clean, maintainable, and scalable code written with best practices.",
+      "Led migrations to modern tech stacks, reducing technical debt.",
   },
   {
     id: 5,
-    value: "3x",
-    label: "Team Growth Impact",
-    description: "Helped junior devs level up and optimized team workflows.",
+    value: "2+",
+    label: "Teams Mentored",
+    description: "Guided junior developers and improved team best practices.",
   },
   {
     id: 6,
     value: "100%",
-    label: "Remote Ready",
-    description:
-      "Equipped with tools and experience to thrive in remote environments.",
+    label: "Remote Collaboration",
+    description: "Experienced in international projects and remote workflows.",
   },
 ];
 
