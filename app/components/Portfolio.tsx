@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import project1 from "@/assets/proj5.png";
+import MentalNotes from "@/assets/mentalNotes.jpg";
 import project2 from "@/assets/proj6.png";
 import project3 from "@/assets/proj7.png";
 import {
@@ -10,14 +10,17 @@ import {
   motion,
   animate,
 } from "framer-motion";
+import Link from "next/link";
 
 const projects = [
   {
     id: 1,
-    year: 2024,
-    title: "Project 1",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: project1,
+    year: 2025,
+    title: "Mental Notes",
+    description:
+      "Mental Notes is a web platform designed to support mental health care by streamlining communication and engagement between patients and therapists. The application allows for role-based access, personalized content, and a user-friendly experience aimed at empowering mental health journeys.",
+    image: MentalNotes,
+    link: "https://github.com/cfrinka/mental-notes",
   },
   {
     id: 2,
@@ -66,11 +69,11 @@ const Portfolio = () => {
             <div
               key={project.id}
               onClick={() => setSelectedProject(project)}
-              className="mb-8 group cursor-pointer"
+              className="mb-8 group"
             >
               <p className="text-lg mb-2 text-purple-400">{project.year}</p>
               <h3
-                className={`text-3xl font-semibold group-hover:text-purple-400 transition-colors ${
+                className={` cursor-pointer text-3xl font-semibold group-hover:text-purple-400 transition-colors ${
                   selectedProject.id === project.id ? "text-purple-200" : ""
                 } duration-300`}
               >
@@ -83,6 +86,17 @@ const Portfolio = () => {
                 <p className="text-purple-400 transition-all duration-500 ease-in-out">
                   {project.description}
                 </p>
+              )}
+              {selectedProject.id === project.id && (
+                <>
+                  <div className="border-b-2 border-purple-200 my-4"></div>
+                  <Link
+                    className="text-purple-400 text-xl transition-all duration-500 ease-in-out hover:text-white"
+                    href={project.link ? project.link : ""}
+                  >
+                    Github Repository
+                  </Link>
+                </>
               )}
             </div>
           ))}
