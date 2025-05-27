@@ -28,21 +28,22 @@ const Hero = () => {
   const border = useMotionTemplate`1px solid ${color}`;
   const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
 
-  const handleDownload = () => {
-    const language = navigator.language;
-    if (language === "pt-BR") {
-      window.open(
-        process.env.NEXT_PUBLIC_CVPTBR,
-        "_blank",
-        "noopener noreferrer"
-      );
-    } else {
-      window.open(
-        process.env.NEXT_PUBLIC_CVENG,
-        "_blank",
-        "noopener noreferrer"
-      );
-    }
+  const handleDownloadEng = () => {
+    const link = document.createElement("a");
+    link.href = "/files/eng.pdf"; // Relative to your public folder
+    link.download = "Carlos-Frinka-Neto-CV-English.pdf"; // Optional: force a download with a specific name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleDownloadPTBR = () => {
+    const link = document.createElement("a");
+    link.href = "/files/ptbr.pdf"; // Relative to your public folder
+    link.download = "Carlos-Frinka-Neto-CV-PT-BR.pdf"; // Optional: force a download with a specific name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -67,16 +68,28 @@ const Hero = () => {
         <p className="my-6 max-w-3xl text-center text-2xl">
           Fullstack Developer based in Brazil, with over 5 years experience
         </p>
-        <motion.button
-          style={{ border, boxShadow }}
-          whileHover={{ scale: 1.015 }}
-          whileTap={{ scale: 0.985 }}
-          className="flex w-fit items-center gap-2 rounded-full px-4 py-2"
-          onClick={() => handleDownload()}
-        >
-          Download CV
-          <FiArrowRight />
-        </motion.button>
+        <div className="flex flex-col md:flex-row items-center gap-4">
+          <motion.button
+            style={{ border, boxShadow }}
+            whileHover={{ scale: 1.015 }}
+            whileTap={{ scale: 0.985 }}
+            className="flex w-fit items-center gap-2 rounded-full px-4 py-2"
+            onClick={() => handleDownloadEng()}
+          >
+            Download CV English
+            <FiArrowRight />
+          </motion.button>
+          <motion.button
+            style={{ border, boxShadow }}
+            whileHover={{ scale: 1.015 }}
+            whileTap={{ scale: 0.985 }}
+            className="flex w-fit items-center gap-2 rounded-full px-4 py-2"
+            onClick={() => handleDownloadPTBR()}
+          >
+            Download CV PT-BR
+            <FiArrowRight />
+          </motion.button>
+        </div>
       </div>
       <div className="bg-circle-container">
         <div className="bg-circle-background"></div>

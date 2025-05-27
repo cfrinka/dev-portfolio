@@ -2,8 +2,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import MentalNotes from "@/assets/mentalNotes.jpg";
-import project2 from "@/assets/proj6.png";
-import project3 from "@/assets/proj7.png";
 import {
   useMotionTemplate,
   useMotionValue,
@@ -21,20 +19,7 @@ const projects = [
       "Mental Notes is a web platform designed to support mental health care by streamlining communication and engagement between patients and therapists. The application allows for role-based access, personalized content, and a user-friendly experience aimed at empowering mental health journeys.",
     image: MentalNotes,
     link: "https://github.com/cfrinka/mental-notes",
-  },
-  {
-    id: 2,
-    year: 2024,
-    title: "Project 2",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: project2,
-  },
-  {
-    id: 3,
-    year: 2024,
-    title: "Project 3",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: project3,
+    demo: "diariomental.netodev.tech",
   },
 ];
 
