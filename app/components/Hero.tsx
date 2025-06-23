@@ -56,10 +56,7 @@ const Hero = () => {
           Open for work
         </span>
         <h1 className="text-5xl md:text-7xl font-black leading-tight text-white/40">
-          Hi there, I am{" "}
-          <span className="bg-gradient-to-br from-white to-gray-400 bg-clip-text text-transparent">
-            Neto
-          </span>
+          Hi there, I am <motion.span style={{ color }}>Neto</motion.span>
         </h1>
 
         <div>
