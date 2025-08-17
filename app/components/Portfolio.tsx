@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import MentalNotes from "@/assets/mentalNotes.jpg";
+import JarvisGatekeeper from "@/assets/jarvis.jpg";
+import Turing from "@/assets/timeline.jpg";
 import {
   useMotionTemplate,
   useMotionValue,
@@ -20,6 +22,26 @@ const projects = [
     image: MentalNotes,
     link: "https://github.com/cfrinka/mental-notes",
     demo: "diariomental.netodev.tech",
+  },
+  {
+    id: 2,
+    year: 2025,
+    title: "Jarvis Gatekeeper",
+    description:
+      "A complete visitor access control solution for corporate environments. The system enables visitor registration, check-in/check-out, and real-time monitoring with a modern and intuitive interface.",
+    image: JarvisGatekeeper,
+    link: "https://github.com/cfrinka/jarvis-gatekeeper",
+    demo: "",
+  },
+  {
+    id: 3,
+    year: 2025,
+    title: "Timeline",
+    description:
+      "A React-based interactive timeline component built with Next.js and Tailwind CSS that visualizes tasks in a horizontal timeline with compact lane assignment, category-based filtering, and persistent task editing.",
+    image: Turing, // Placeholder - you'll add the actual image later
+    link: "https://github.com/cfrinka/turing",
+    demo: "",
   },
 ];
 
@@ -56,13 +78,12 @@ const Portfolio = () => {
               onClick={() => setSelectedProject(project)}
               className="mb-8 group"
             >
-              <p className="text-lg mb-2 text-purple-400">{project.year}</p>
               <h3
                 className={` cursor-pointer text-3xl font-semibold group-hover:text-purple-400 transition-colors ${
                   selectedProject.id === project.id ? "text-purple-200" : ""
                 } duration-300`}
               >
-                {project.title}
+                • {project.title}
               </h3>
               {selectedProject.id === project.id && (
                 <div className="border-b-2 border-purple-200 my-4"></div>
@@ -93,9 +114,9 @@ const Portfolio = () => {
               <h3 className="text-xl font-semibold text-purple-300">More Projects Coming Soon</h3>
             </div>
             <p className="text-purple-400/80 text-sm leading-relaxed">
-              I'm currently working on preparing additional projects for showcase. 
-              Most of my work involves confidential client projects, so I'm creating 
-              sanitized versions that don't expose any client business information. 
+              I&apos;m currently working on preparing additional projects for showcase. 
+              Most of my work involves confidential client projects, so I&apos;m creating 
+              sanitized versions that don&apos;t expose any client business information. 
               Stay tuned for more exciting projects!
             </p>
           </div>
