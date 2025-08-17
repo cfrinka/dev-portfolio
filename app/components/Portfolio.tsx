@@ -85,6 +85,20 @@ const Portfolio = () => {
               )}
             </div>
           ))}
+          
+          {/* Work in Progress Indicator */}
+          <div className="mt-12 p-6 border-2 border-dashed border-purple-400/50 rounded-lg bg-purple-900/20">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+              <h3 className="text-xl font-semibold text-purple-300">More Projects Coming Soon</h3>
+            </div>
+            <p className="text-purple-400/80 text-sm leading-relaxed">
+              I'm currently working on preparing additional projects for showcase. 
+              Most of my work involves confidential client projects, so I'm creating 
+              sanitized versions that don't expose any client business information. 
+              Stay tuned for more exciting projects!
+            </p>
+          </div>
         </div>
         <div className="w-full flex items-center justify-center">
           <Image
